@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex San", sans-serif;
+}
+
+body{
+    max-width: 100%;
+    position: relative; 
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+
+}
+
+.container{
+   
+    margin: 20px 30px;
+ }
+ 
+ .header .container{
+     margin: 0;
+ }
+ 
+ nav{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background: #101010;
+     padding: 20px;
+     
+ }
+
+.logo a{
+    color: rgb(255, 98, 0);
+    font-size: 30px;
+    margin-top: 0;
+    
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    margin-left: 50px;
+    margin-top: -7px;
+    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    
+}
+
+ul li{
+    display: inline-block;
+    margin: 0 20px;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+ul li a::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(255, 98, 0);
+    left: 0%;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+ul li a:hover::after{
+    width: 100%;
+}
+
+
+
+.dropDown{      
+    position: absolute;
+    margin-top: 10px;
+    left: 0;
+    top: 100%;
+    margin-left: -30px;
+    background-color: #101010;
+    z-index: 2;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s;
+}
+
+.dropDown.openMenu{
+    max-height: 40vh;
+}
+
+.dropDown ul{
+    display: block;
+    margin: 10px;
+}
+
+.dropDown ul li{
+    width: 140px;
+    padding: 10px 0;
+}    
+
+
+p{
+    
+    color: #969191;
+    line-height: 30px;
+}
+
+main{
+    margin: 70px 0;
+    width: 99%;
+}
+
+#web{
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+#web-design{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+p{
+    margin-bottom: 20px;
+    width: 100%;
+    display: block;
+}
+
+.marketing-points{
+   display: flex;
+   gap: 20px;
+}
+
+.marketing-points span{
+    color: rgb(255, 98, 0);
+}
+
+
+img{
+    height: 400px;
+    width: 48%;
+    border-radius: 10px;
+}
+
+.details{
+    display: flex;
+    gap: 30px;
+}
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background: #101010;
+   
+   
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-footer{  
+   flex-basis: 35%;
+   line-height: 40px;
+   
+}
+.left-footer h1{
+    margin-bottom: 10px
+}
+
+.left-footer p{
+    color: #969191;
+}
+
+.contact-info{
+    position: relative;
+    margin-top: 20px;
+    line-height: 50px;
+}
+.contact-info p{
+    margin-left: 30px;
+    margin-top: -20px;
+}
+
+#info {
+    display: block;
+    position: absolute;
+    margin: 10px 0 0;
+    color: rgb(255, 98, 0);
+}
+
+
+.icons a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: 0.5s;
+    margin-top: -150px;
+}
+
+.icons a:hover{
+    color: rgb(255, 98, 0);
+    transform: translateY(-8px);
+}
+
+.right-footer{
+    display: flex;
+    flex-basis: 60%;
+    justify-content: space-aroundS;
+    gap: 25%;
+    list-style: none;
+    line-height: 40px;
+}
+.right-footer h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.right-footer li a{
+    font-size: 15px;
+   line-height: 20px;
+   color: #969191;
+}
+.right-footer li a:hover{
+    text-decoration: underline;
+}
+
+
+.copyright{
+   
+    width: 100%;
+    background: #262626;
+    text-align: center;
+    margin: 20px 0 0;
+    font-weight: 400;
+    padding: 20px 0 0 ;
+    color: white;
+}
+
+
+
+
+/* css for small screen */
+
+.fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 800px){
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav ul{
+        background: rgb(255, 98, 0);
+        top: 0;
+        right: -250px;
+        position: absolute;
+        padding-top: 50px;
+        width: 250px;
+        height: 110vh;
+        z-index:2 ;
+        transition: 0.5s;
+       flex-direction: column;
+    }
+
+    ul li{
+        display: block;
+        margin: 10px 25px;
+        transition:  0.5s ease;
+    }
+    ul li:hover{
+        background: #000;
+        width: 100%;
+        left: 0%;
+        padding: 10px 20px;
+    }
+    .dropdown ul{
+        display: block;
+        position: relative;
+        padding: 0 10px;
+        left: -5px; 
+        top: -8px;   
+    }
+    
+    .dropdown ul li{
+     margin: 2px;
+    }
+
+    .dropdown.open-menu{
+        max-height: 20vh;
+       
+    }
+
+    .dropDown ul{
+        display: block;
+        position: relative;
+        padding: 0 10px;
+        left: -5px; 
+        top: -8px;   
+    }
+    
+    .dropDown ul li{
+     margin: 2px;
+    }
+
+    .dropDown.openMenu{
+        max-height: 50vh;
+       
+    }
+    
+    ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    main{
+        margin: 20px 0;
+    }
+
+    #web{
+        height: 90%;
+    }
+    
+    .service {
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .marketing-points{
+        flex-direction: column;
+    }
+
+    .service img{
+        height: 20%;
+        width: 100%;
+    }
+
+    .details{
+        flex-direction: column;
+    }
+    .service h1{
+        margin: 10px 0;
+        font-size: x-large;
+    }
+    
+
+    footer .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .right-footer{
+       display: flex;
+       flex-direction: column;
+       line-height: 30px;
+       
+    }
+
+    .right-footer h3{
+        margin-top: 30px;
+    }
+
+    
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+    
+    .service img{
+        height: 550px ;
+        width: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .left-footer p{
+    width: 90%;
+    }
+    .right-footer{
+        flex-basis: 60%;
+        gap: 20%;
+        
+    }
+}

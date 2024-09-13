@@ -1,0 +1,1146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex San", sans-serif;
+}
+
+body{
+    max-width: 100%;
+    position: relative; 
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+
+}
+
+.container{
+   
+   margin: 20px 30px;
+}
+
+.header .container{
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #101010;
+    padding: 20px;
+    
+}
+
+.logo {
+    color: rgb(255, 98, 0);
+    font-size: 30px;
+    margin-top: 0;  
+}
+
+.logo a{
+    color: rgb(255, 98, 0);
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    margin-left: 50px;
+    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    
+}
+
+ul li{
+    display: inline-block;
+    margin: 0 20px;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+ul li a::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(255, 98, 0);
+    left: 0%;
+    border-radius: 50%;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+ul li a:hover::after{
+    width: 100%;
+}
+
+.dropdown{
+         
+    position: absolute;
+    margin-top: 10px;
+    left: 0;
+    top: 100%;
+    margin-left: -30px;
+    background-color: #212121;
+    z-index: 2;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s;
+}
+
+.dropdown.open-menu{
+    max-height: 40vh;
+}
+
+.dropdown ul{
+    display: block;
+    margin: 10px;
+}
+
+.dropdown ul li{
+    width: 120px;
+    padding: 10px 0;
+    
+
+}
+
+.dropDown{      
+    position: absolute;
+    margin-top: 10px;
+    left: 0;
+    top: 100%;
+    margin-left: -30px;
+    background-color: #101010;
+    z-index: 2;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s;
+}
+
+.dropDown.openMenu{
+    max-height: 100vh;
+}
+
+.dropDown ul{
+    display: block;
+    margin: 10px;
+}
+
+.dropDown ul li{
+    width: 140px;
+    padding: 10px 0;
+    
+
+}
+
+/* ......... Home Page.................. */
+
+
+main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 95%;
+    
+}
+
+h1{
+   margin-top:50px;
+   font-size: 50px;
+   font-weight: 700;
+   
+}
+
+main p{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #969191;
+    line-height: 30px;
+}
+span{
+    color: rgb(255, 98, 0);
+}
+.new{
+    display: flex;
+    justify-content: space-around;
+    margin:20px  0;
+    gap: 5%;
+      
+}
+
+
+.home-1{
+    height: 400px;
+    width: 320px;
+    border-radius: 10px;
+}
+
+.home-2{
+    height: 400px;
+    width: 530px;
+    border-radius: 10px;
+}
+
+/* .........About Page ......................*/
+
+
+.about-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 98%;
+   
+}
+.info-main h1{
+    margin-top: 0;
+}
+
+
+
+.info-main h3{
+    margin-top: 20px;
+}
+
+.tech-tool h2{
+    margin-left: 40px;
+    margin-top: 5px;
+}
+
+.tech-tool div i::after{
+    content: '';
+    height: 3px;
+    width: 100px;
+    position: absolute;
+    background: rgb(255, 98, 0);
+    left: 100%;
+    bottom: -6px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+
+.about p{
+    line-height: 30px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color: #969191;
+}
+
+.tech{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.tech-tool{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+}
+
+
+.about-img{
+    flex-basis: 40%;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+
+.tech div h1{
+    margin: 5px 0;
+}
+
+
+#tech-font{
+    display: block;
+    position: absolute;
+    margin: 3px 0;
+    font-size: 30px;
+    color: rgb(255, 98, 0);
+}
+
+
+.button{
+    text-align: center;
+    padding: 10px;
+    width: 25%;
+    font-size: 15px;
+    font-weight: 700;
+    background: rgb(255, 98, 0);
+    border: 2px solid rgb(255, 98, 0);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.button:hover{
+    background: #000;
+    border: 1px solid rgb(255, 98, 0);
+}
+
+
+
+/* ................ Aboout Page end ................... */
+
+
+/* ................... service Page ..................... */
+
+
+.service main {
+    position: relative;
+    margin: 30px 0;
+    width: 99%;
+}
+
+span{
+    color:rgb(255, 98, 0);
+}
+
+.service main h1{
+    font-size: 40px;
+    margin: 30px 0;
+
+}
+
+.service-item{
+    display: flex; 
+    gap: 30px;
+  margin-bottom: 30px;
+    
+   
+}
+
+
+
+.service-item img{   
+   
+    width: 500px;
+    height: 380px;
+    border-radius: 15px;
+}
+
+/* .service-img-1{
+    height: 400px ;
+    width: 600px;
+}
+
+.service-img-2{
+    height: 380px ;
+    width: 600px;
+}
+
+.service-img-3{
+    height: 390px ;
+    width: 600px;
+} */
+
+.serviceDetails{
+    flex-basis: 100%;
+   
+}
+.service-item h2{
+    font-size: 30px;
+ }
+
+.service-item p{
+    color:#969191;
+    line-height: 27px;
+    margin-bottom: 30px;
+}
+
+.service-item .button{
+    width: fit-content;
+    background:rgb(255, 98, 0) ;
+    padding: 15px 30px;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px 5%;
+    transition: 0.5s ease;
+}
+
+.service-item .button:hover{
+    background: #000;
+    border: 2px solid rgb(255, 98, 0);
+}
+
+/* .................... Service Page End ............ */
+
+/* ................... Portfolio ...................... */
+
+.portfolio main{
+    position: relative;
+    width: 99%;
+}
+.portfolio main h1{
+    margin: 10px 0;
+}
+span{
+    color: rgb(255, 98, 0);
+}
+
+.port{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.port div{
+    background: #212121;
+    border-radius: 20px;
+    margin-bottom: 30px; 
+    width: 45%;
+    overflow: hidden;
+
+}
+
+.port h2{
+    font-size: xx-large;
+    margin: 15px 5px ;
+}
+.port p{
+    margin:  5px ;
+    color: #969191;
+}
+
+
+.port img{
+   
+    width: 99%;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+.port img:hover{
+    transform: scale(1.1);
+}
+
+
+/* ............Portfolio End ................ */
+
+
+/* ...................... customer ................ */
+
+/* @keyframes slide{
+    form{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    } */
+
+    .swiper {
+        height: 100%;
+        width: 98%;
+      }
+      
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+      }
+      .swiper-pagination{
+          position: relative;
+          margin-top: 30px;
+        
+      }
+      .slider-wrapper .swiper-pagination-bullet{
+        background-color: #fff;
+    }
+
+
+/* .slider-wrapper .swiper-pagination-bulets{
+    color: white;
+} */
+
+/* @keyframes  {
+    o%{
+        transform : translateX(0);
+    }
+    100%{
+        transform: translateX(cal(-250px*4))
+    }
+} */
+/* ................... contact ................. */
+
+.contact{
+    position: relative;
+  
+}
+
+.contact .container{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+   
+}
+
+.contact img{
+    margin-top: 50px;
+    
+    width: 50% ;
+    border: 1px solid #212121;
+    border-radius: 10px;
+}
+form{
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+  
+}
+form h1{
+    font-size: 30px;
+  
+       
+}
+
+form p{
+    font-weight: 400;
+    margin-bottom: 5px;
+    gap: 30px;
+}
+
+.name{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100%;
+    height: 10%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: #212121;
+    color: white;
+    outline: none;
+    
+}
+
+.email{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100%;
+    height: 10%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: #212121;
+    color: white;
+    outline: #000;
+    
+}
+.text{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100%;
+    height: 25%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: #212121;
+    color: white;
+    outline: none;
+    resize: none;
+    
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+    width: 20%;
+    height: 10%;
+    background-color: rgb(255, 98, 0);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+
+button:hover{
+    background-color: #000;
+    border: 1px solid rgb(255, 98, 0);
+}
+
+#msg{
+    color: rgb(255, 98, 0);
+    margin-top: 20px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+
+/* ..................... client .............. */
+.client{
+    position: relative;
+    width: 100%;
+}
+
+.client-review{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+    
+}
+
+.client-wrapper{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #262626;
+   width: 100%;
+}
+.client-wrapper-list{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+    background: #262626;
+}
+
+
+.client-wrapper p{
+    color: #969191;
+
+}
+.client-wrapper-list img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    
+}
+
+.client-wrapper i{
+    display: block;
+    color: rgb(255, 98, 0);
+
+}
+
+.star-icons{
+    display: flex;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+
+
+/* ..................Team Members ............... */
+
+.team{
+    margin: 50px 0;
+}
+span{
+    color: rgb(255, 98, 0);
+}
+
+.team .container h1{
+    margin-bottom: 40px;
+}
+
+.team-member{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.team-wrap{
+    padding: 20px;
+    border-radius: 20px;
+    background: #262626; 
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.team-icons{
+    margin: 10px 0 20px;
+}
+
+.team-member img{
+    height: 80%;
+    width: 90%;
+
+    border-radius: 20px;
+}
+
+.team-member h2{
+    margin: 10px 0;
+}
+
+
+
+.team-icons a{
+    margin-right: 10px ;
+    transition: 0.5s;
+    
+    
+}
+
+.team-icons a:hover{
+    color: rgb(255, 98, 0);
+}
+
+/* ............... footer page ................. */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background: #101010;
+   
+   
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-footer{  
+   flex-basis: 35%;
+   line-height: 30px;
+   
+}
+.left-footer h1{
+    margin-bottom: 10px;
+}
+
+.left-footer p{
+    color: #969191;
+}
+
+.contact-info{
+    position: relative;
+    margin-top: -30px;
+}
+.contact-info p{
+    margin-left: 35px;
+    margin-top: 40px;
+}
+
+#info {
+    display: block;
+    position: absolute;
+   margin-top: 5px;
+    color: rgb(255, 98, 0);
+}
+
+
+.icons a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+
+.icons a:hover{
+    color: rgb(255, 98, 0);
+    transform: translateY(-8px);
+}
+
+.right-footer{
+    display: flex;
+    flex-basis: 60%;
+    justify-content: space-aroundS;
+    gap: 25%;
+    list-style: none;
+    line-height: 40px;
+}
+.right-footer h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.right-footer li a{
+    font-size: 15px;
+   line-height: 20px;
+   color: #969191;
+   transition: 0.5s;
+}
+
+.right-footer li a:hover{
+    text-decoration: underline;
+}
+
+.copyright{
+   
+    width: 100%;
+    background: #262626;
+    text-align: center;
+    margin: 20px 0 0;
+    font-weight: 400;
+    padding: 20px 0 20px;
+    color: white;
+}
+
+
+
+/* css for small screen */
+
+.fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 800px){
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav ul{
+       background: rgb(255, 98, 0);
+       top: 0;
+       right: -270px;
+       position: absolute;
+       padding-top: 50px;
+       z-index: 2;
+       height: 150vh;
+       width: 250px;
+       transition: 0.5s;
+        flex-direction: column;
+
+    }
+
+    ul li{
+        display: block;
+        margin: 15px 25px ;
+        transition: 0.5s ease;
+        
+    }
+    ul li:hover{
+        background: #000;
+        width: 100%;
+        left: 0%;
+        padding: 10px 20px;
+    }
+    
+    .dropdown ul{
+        display: block;
+        position: relative;
+        padding: 0 10px;
+        left: -5px; 
+        top: -8px;   
+    }
+    
+    .dropdown ul li{
+     margin: 2px;
+    }
+
+    .dropdown.open-menu{
+        max-height: 50vh;
+       
+    }
+    
+    .dropDown ul{
+        display: static;
+        position: relative;
+        padding: 0 10px;
+        left: -5px; 
+        top: -8px;   
+    }
+    
+    .dropDown ul li{
+     margin: 2px;
+    }
+
+    .dropDown.openMenu{
+        max-height: 50vh;
+       
+    }
+    ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .main{
+        width: 85%;
+    }
+
+    h1{
+        font-size: x-large;
+        width: fit-content;
+    }
+    p{
+        width: 120%;
+    }
+
+    .new{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .new img{
+        width: 120%;
+        height: 80%;
+    }
+    
+
+    /*  ........... about .......... */
+    .about-item {
+       width: 85%;
+
+    }
+
+    .info-main h1{
+        font-size: 40px;
+    }
+
+    h3{
+        font-size: medium;
+        margin-bottom: 10px;
+    }
+
+    .tech-tool .button{
+        width: 150px;
+    }
+
+    .tech{
+        flex-direction: column;
+    }
+    
+    .about-img{
+        width: 330px;
+    }
+
+    
+   
+
+    /* .......... Service .......... */
+
+    .service main{
+        width: 85%;
+    }
+
+    .service-item {
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .service-item img{
+        height: 20%;
+        width: 85vw;
+    }
+
+    .service-item h1{
+        margin: 10px 0;
+        width: 20px;
+        font-size: large;
+    }
+
+    .service-item p{
+        width: 85vw;
+    }
+    
+
+/* ............... Portfolio ............ */
+
+.portfolio main{
+    width: 85%;
+}
+.portfolio h1{
+    font-size: 30px;
+}
+
+.port{
+    flex-direction: column;
+   
+}
+.port div{
+    margin-bottom: 20px;
+    width: 120%;
+
+    
+}
+
+.port img{
+    height: 60%;
+    width: 100%;
+}
+
+.port h1{
+    font-size: medium;
+}
+
+.port p{
+    font-size: medium;
+}
+
+/* ..................client ..................... */
+
+.client-review{
+    
+    flex-direction: column;
+}
+
+.client-review p{
+    width: 100%;
+}
+
+/* .................. team ....................... */
+
+.team-member{
+    flex-direction: column;
+   
+ 
+}
+
+.team h1{
+    font-size: 30px;
+    
+}
+
+
+/* 
+.team-member img{
+    width: 80%;
+} */
+
+.team-member p{
+    margin-left: -30px;
+}
+
+
+/* .................... costomer ................ */
+
+.swiper {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+  }
+ 
+
+/* ................. contact ................... */
+
+
+.contact .container{
+    flex-direction: column;
+}
+.contact img{
+    width: 90vw;
+    height: 60vh;
+}
+.contact h1{
+    font-size: xx-large;
+}
+
+
+.name, .email, .text{
+    width: 90vw;
+}
+
+
+
+
+/* ............... footer .................. */
+
+
+footer .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer p{
+        font-size: medium;
+        width: 110%;
+    }
+
+
+    .right-footer{
+       display: flex;
+       flex-direction: column;
+       line-height: 30px;
+       
+    }
+
+    .right-footer h3{
+        margin-top: 30px;
+    }
+
+    
+}
+
+
+
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+
+    .home-1{
+        width: 300px;
+        height: 300px;
+
+    }
+    .home-2{
+        height: 300px;
+        width: 400px;
+    }
+
+    .about-img {
+        height: 500px;
+    }
+    .service-item{
+        width: 100%;
+      
+    }
+    .service-item img{
+        width: 500px;
+        height: 450px;
+        
+
+    }
+
+    .team-icons:hover{
+        background-color: transparent;
+    }
+
+    .team-wrap{
+        height: 100%;
+    }
+
+
+
+
+
+    .left-footer p{
+    width: 90%;
+    }
+    .right-footer{
+        flex-basis: 60%;
+        gap: 20%;
+        
+    }
+}
